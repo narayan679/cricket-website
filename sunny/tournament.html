@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style_tour.css">
+        <title>FCC | Tournament/Events</title>
+        <link rel="icon" href="images/icon.ico" />
+    </head>
+    <body id="bg" background="images/back.jpg">
+        <div id="header">
+            <img id="logo" src="images/logo.png" alt="logo" />
+            <h1>Francis Cricket Club</h1>
+            <a href="login.php"><img id="loginlogo" src="images/login_logo.png" alt="login" title="Click to Login"></a>
+        </div>
+
+        <div id="header_option">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="tournament.html">Tournament/Events</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="javascript:void(0)">About Us</a>
+                    <div class="dropdown-content">	
+                        <a href="about coach.html">Our Coach Details</a>
+                        <a href="about club.html">Our Club Details</a>
+                    </div>
+                </li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 10</div>
+                <img src="images/t35.jpg" style="width:100%" height="100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+
+            <div class="mySlides fade">                                                           
+                <div class="numbertext">2 / 10</div>
+                <img src="images/t38.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 10</div>
+                <img src="images/t2.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			 <div class="mySlides fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="images/t33.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="images/t34.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext"> 6 / 10</div>
+                <img src="images/t31.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="images/t39.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="images/t32.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="images/t37.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+			<div class="mySlides fade">
+                <div class="numbertext"> 10 / 10</div>
+                <img src="images/t36.jpg" style="width:100%">
+                <div class="text">Upcoming Events</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+			<span class="dot" onclick="currentSlide(7)"></span>
+			<span class="dot" onclick="currentSlide(8)"></span>
+			<span class="dot" onclick="currentSlide(9)"></span>
+			<span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <hr>
+
+        <div id="footer_">
+            <footer>
+                <marquee><p>Copyright © 2020. All rights reserved by Francis Cricket Club.</p></marquee>
+            </footer>
+        </div>
+
+    </body>
+</html>

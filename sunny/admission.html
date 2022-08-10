@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style_admission.css">
+        <link rel="stylesheet" href="css/main.css">
+        <title>FCC | Admission</title>
+        <link rel="icon" href="images/icon.ico" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <script>
+            function validateForm()
+            {
+                var fname = document.forms["enquiry_form"]["fname"];
+                var lname = document.forms["enquiry_form"]["lname"];
+                var mobile = document.forms["enquiry_form"]["mob_no"];
+                var alphabets = /^[A-Za-z][A-Za-z ]+$/;
+                var alphanum = /^[A-Za-z0-9)(,/. ]+$/;
+                var num = /^[0-9]+$/;
+
+                if(!(fname.value.match(alphabets)))
+                {
+                    alert("Use alphabets in name");
+                    fname.focus;
+                    return false;
+                }
+                if(!(lname.value.match(alphabets)))
+                {
+                    alert("Use alphabets in name");
+                    lname.focus;
+                    return false;
+                }
+                if (!(mobile.value.match(num)))
+                {
+                    alert("Mobile number must be numeric"); 
+                    return false;
+                }
+            }
+        </script>
+
+    </head>
+    <body id="bg" background="images/back.jpg">
+        <div id="header">
+            <img id="logo" src="images/logo.png" alt="logo" />
+            <h1>Francis Cricket Club</h1>
+            <a href="login.php"><img id="loginlogo" src="images/login_logo.png" alt="login" title="Click to Login"></a>
+        </div>
+
+        <div id="header_option">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="tournament.html">Tournament/Events</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="javascript:void(0)">About Us</a>
+                    <div class="dropdown-content">	
+                        <a href="about coach.html">Our Coach Details</a>
+                        <a href="about club.html">Our Club Details</a>
+                    </div>
+                </li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="admission">
+            <h1 align="center">Admission Form</h1>
+            <form action="server.php" method="post" onsubmit="return validateForm();">
+
+                <div id='img_contain' ><img id="blah" align='middle' src="images/profile.png" alt="your image" title=''/></div>
+                <br>
+                <input type='file' id="imgInp" />
+                <script>
+                    function readURL(input) {
+
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+
+                            reader.onload = function(e) {
+                                $('#blah').attr('src', e.target.result);
+
+                                $('#blah').hide();
+                                $('#blah').fadeIn(650);
+
+                            }
+
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+
+                    $("#imgInp").change(function() {
+                        readURL(this);
+                    });
+                </script>
+
+                <br>
+
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" placeholder="Enter your first name here" autofocus required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" placeholder="Enter your last name here" required>
+
+                <label for="mob_no">Mobile Number:</label>
+                <input type="text" name="mob_no" placeholder="Enter your phone number here" maxlength="10" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" name="email" placeholder="Enter your e-mail id here" required>
+
+                <label>Gender:</label>&nbsp;&nbsp;&nbsp;
+                <input id="one" type="radio"  name="gender" value="Male" checked>&nbsp;<span style="color: white;font-family: arial;font-size:20px;">Male</span>&nbsp;&nbsp;
+                <input id="two" type="radio"  name="gender" value="Female">&nbsp;<span style="color: white;font-family: arial;font-size:20px;">Female</span>
+                <br>
+
+                <label style="float: left">Date of Birth:</label>
+                <input type="date" name="dob" max="2005-12-31" required>
+
+                <label for="field_op">Select Your Field:</label>
+                <select name="field">
+                    <option value="bat">Batting</option>
+                    <option value="bowl">Bowling</option>
+                    <option value="ar">All Rounder</option>
+                </select>
+
+               
+
+                <label for="psw">Password:</label>
+                <input type="password" placeholder="Enter your Password here" name="pass"  required />
+
+                <label for="psw">Enter Password Again:</label>
+                <input type="password" placeholder="Enter your Password again here" name="pass"  required />
+
+                <input type="submit" formtarget="_blank" value="Send Us">
+            </form>
+        </div>
+
+        <hr>
+
+        <div id="footer_">
+            <footer>
+               </marquee><p>Copyright © 2020. All rights reserved by Francis Cricket Club.</p>
+            </footer>
+        </div>
+    </body>
+</html>

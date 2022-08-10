@@ -1,0 +1,50 @@
+.main_about {
+    background-color: rgb(0,0,0,0.7);
+    padding: 0px 10px 12px;
+    border-radius: 8px;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-name: fadeInUp;
+    overflow: auto;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.main_about h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: arial black;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: auto;
+}
+
+.main_about p {
+    font-family: arial;
+    color: white;
+    text-align: justify;
+}
+.main_about img{
+    padding-left: 10px;
+    float: right;
+    width: 500px;
+    height: 280px;
+}
+
+@media only screen and (max-width:620px){
+    .main_about img{
+        width: 100%;
+    }
+}

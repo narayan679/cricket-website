@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feesl.xsl"?>
+<Fees>
+<Fees-Details>
+<coach_name>Anand Jadeja</coach_name>
+<batting>7000</batting>
+<bowling>8000</bowling>
+<all_rounder>10000</all_rounder>
+</Fees-Details>
+<Fees-Details>
+<coach_name>Sachin Tendulkar</coach_name>
+<batting>5600</batting>
+<bowling>3400</bowling>
+<all_rounder>9000</all_rounder>
+</Fees-Details>
+<Fees-Details>
+<coach_name>Virat Kohli</coach_name>
+<batting>5789</batting>
+<bowling>4567</bowling>
+<all_rounder>9500</all_rounder>
+</Fees-Details>
+<Fees-Details>
+<coach_name>Mahindra Singh Dhoni</coach_name>
+<batting>5600</batting>
+<bowling>7800</bowling>
+<all_rounder>5000</all_rounder>
+</Fees-Details>
+</Fees>

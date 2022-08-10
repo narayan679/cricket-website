@@ -1,0 +1,76 @@
+.coach_details {
+    background-color: rgb(0,0,0,0.7);
+    padding: 0px 10px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 700px;
+    margin: auto;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-name: fadeInUp;
+}
+
+.coach_details h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: arial black;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.coach_details:hover{
+    background-color: black;
+}
+
+.coach_details img{
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-left: 25px;
+    transition: transform 0.2s;
+}
+
+.coach_details img:hover{
+    transform: scale(1.2);
+}
+
+.coach_details h3{
+    font-family: arial;
+    position: relative;
+    color: white;
+    left: 50px;
+}
+
+table,th,td{
+    width: 100%;
+    height: 300px;
+    color: white;
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+@media only screen and (max-width:620px){
+    .coach_details{
+        width: 90%;
+    }
+    .coach_details img{
+        width: 80%;
+    }
+    h3{
+        width: 80%;
+    }
+}

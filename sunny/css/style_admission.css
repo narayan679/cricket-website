@@ -1,0 +1,107 @@
+.admission{
+    background-color: rgb(0,0,0,0.7);
+    border-radius: 8px;
+    margin: auto;
+    width: 600px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 20px;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.admission h1 {
+    font-size: 45px;
+    color: white;
+    font-family: arial black;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#img_contain{
+    border:1px solid grey;
+    margin-top:10px;
+    width: 210px;
+    margin: auto;
+}
+
+#imgInp{
+    background-color:gray;
+
+}
+#blah{
+    height:220px;
+    width:auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+}
+
+.admission label{
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+}
+
+input[type=password], input[type=text], select, textarea,input[type=email], input[type=date], input[type=file]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 6px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type=radio]:hover{
+    cursor: pointer;
+}
+
+input[type=submit] {
+    position: relative;
+    font-size: 20px;
+    font-family: arial;
+    width: 60%;
+    background-color: #278A10;
+    color: white;
+    padding: 10px 8px;
+    left: 20%;
+    right: 20%;
+    top: 7px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    outline: none;
+}
+
+input[type=submit]:hover{
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    transform: scale(1.1);
+}
+
+input[type=text]:focus, select:focus, textarea:focus, input[type=email]:focus, input[type=date]:focus{
+    border: 1.5px solid #278A10 ;
+}
+
+@media only screen and (max-width:620px){
+    .admission{
+        width: 90%;
+    }
+}

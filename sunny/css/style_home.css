@@ -1,0 +1,111 @@
+body{
+    font-family: arial black;
+}
+#quote{
+    border: 9px solid black; 
+    border-radius: 8px;
+    margin-top: 20px;
+    top: 10%;
+}
+
+#quote h1{
+    text-shadow: 3px 3px white;
+    opacity: 0.7;
+    text-align: center;
+	color: black;
+    padding: 98px;
+    font-size: 3.5vw;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 0.7;
+    }
+}
+
+hr{
+    border: none;
+    height: 4px;
+    background-color: black;
+}
+.features{
+    margin-top: -12px;
+    padding-bottom: 1px;
+    background-color: rgb(0,0,0,0.7);
+    border-radius: 8px;
+}
+
+.features h1{
+    color: white;
+    text-align: center;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 40px;
+}
+.image_container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.subimg_container{
+    box-sizing: border-box;
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+.image_container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.features ul{
+    color: white;
+    font-size: 18px;
+    list-style-type: square;
+}
+
+.features li{
+    font-family: arial;
+    color: white;
+    font-size: 20px;
+}
+
+.prac_video {
+    margin-top: -12px;
+    padding-bottom: 15px;
+    background-color: rgb(0,0,0,0.7);
+    border-radius: 8px;
+}
+
+.prac_video h1{
+    color: white;
+    text-align: center;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    font-size: 40px;
+}
+
+.prac_video iframe{
+    width: 90%;
+    margin:auto;
+    height: 480px;
+    display: block;
+}
+
+
+@media only screen and (max-width:620px){
+    .subimg_container{
+        width: 100%;
+    }
+}

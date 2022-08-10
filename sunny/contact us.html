@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style_contact.css">
+    <title>FCC | Contact Us</title>
+    <link rel="icon" href="images/icon.ico" />
+    
+    <script>
+        function validateForm()
+        {
+            var fname = document.forms["enquiry_form"]["fname"];
+            var lname = document.forms["enquiry_form"]["lname"];
+            var mobile = document.forms["enquiry_form"]["mob_no"];
+            var alphabets = /^[A-Za-z][A-Za-z ]+$/;
+            var alphanum = /^[A-Za-z0-9)(,/. ]+$/;
+            var num = /^[0-9]+$/;
+            
+            if(!(fname.value.match(alphabets)))
+                {
+                    alert("Use alphabets in name");
+                    fname.focus;
+                    return false;
+                }
+            if(!(lname.value.match(alphabets)))
+                {
+                    alert("Use alphabets in name");
+                    lname.focus;
+                    return false;
+                }
+            if (!(mobile.value.match(num)))
+                {
+                    alert("Mobile number must be numeric"); 
+                    return false;
+                }
+        }
+    </script>
+</head>
+<body id="bg" background="images/back.jpg">
+    <div id="header">
+        <img id="logo" src="images/logo.png" alt="logo" />
+        <h1>Francis Cricket Club</h1>
+        <a href="login.php"><img id="loginlogo" src="images/login_logo.png" alt="login" title="Click to Login"></a>
+    </div>
+    
+    <div id="header_option">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="tournament.html">Tournament/Events</a></li>
+            <li class="dropdown">
+					<a class="dropbtn" href="javascript:void(0)">About Us</a>
+					<div class="dropdown-content">	
+						<a href="about coach.html">Our Coach Details</a>
+						<a href="about club.html">Our Club Details</a>
+					</div>
+            </li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="contact">
+        <h1 align="center">Contact Us</h1>
+        <div class="contact_form">
+            <marquee><h2 align="center">We'd <span style="color: #F12121;">&hearts;</span> to help!</h2></marquee>
+        <form name="enquiry_form" method="post" onsubmit="return validateForm()" action="server.php">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" placeholder="Enter your first name here" autofocus required>
+            
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" placeholder="Enter your last name here" required>
+            
+            <label for="mob_no">Mobile Number:</label>
+            <input type="text" name="mob_no" placeholder="Enter your phone number here" maxlength="10" required>
+            
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email" placeholder="Enter your e-mail id here" required>
+            
+            <label for="state_op">Select Your State:</label>
+            <select name="state">
+                <option value="mah">Maharashtra</option>
+                <option value="wb">West Bengal</option>
+                <option value="ap">Andhara Pradesh</option>
+                <option value="guj">Gujarat</option>
+                <option value="raj">Rajasthan</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea rows="4" cols="20" placeholder="Ask your queries" name="queries" required></textarea>
+            
+            <input type="submit" formtarget="_blank" value="Send Us">
+        </form>
+        </div>
+        
+        <div class="vl"></div>
+        
+        <div class="mapouter">
+            <h2 align="center">Our Location:</h2>
+            <div class="gmap_canvas">
+                <iframe width="455" height="294" id="gmap_canvas" src="https://maps.google.com/maps?q=St%20francis%20institute%20of%20technology%2C%20borivali&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+            </div>
+        
+            <address>
+                    <br>Visit Us at:<br><br>
+                    St. Francis Institute of Technology,<br>
+                    Sardar Vallabhbhai Patel Rd,<br>
+                    Near Bhagwati Hospital,<br>
+                    Mount Poinsur,<br>
+                    Borivali West,<br>
+                    Mumbai,<br>
+                    Maharashtra 400103
+            </address>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div id="footer_">
+        <footer>
+            <marquee><p>Copyright © 2020. All rights reserved by Francis Cricket Club.</p></marquee>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.login_input{
+    position:relative;
+    background-color: rgb(0,0,0,0.8);
+    color: white;
+    width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 0 10px 12px 10px;
+}
+
+.login_input:hover{
+    background-color: black;
+}
+
+.login_input h2{
+    font-size: 45px;
+    border-bottom: 4px solid white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.close{
+    position: relative;
+    float: right;
+    top: -110px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: red;
+}
+
+img.avatar{
+    position: relative;
+    top: -15px;
+    width:25%;
+    left: 37.5%;
+    right: 37.5%;
+}
+
+fieldset{
+    border-radius: 8px;
+}
+
+legend{
+    font-size: 20px;
+}
+
+.login_input label{
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    outline:none;
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    border: 2px solid #278A10 ;
+}
+
+button{
+    position: relative;
+    font-size: 20px;
+    width:60%;
+    left: 20%;
+    right: 20%;
+    outline: none;
+    background-color: #278A10;
+    color: white;
+    padding: 12px 20px;
+    top: 5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+button:hover{
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    transform: scale(1.1);
+}
+.login_input a{
+    color: dodgerblue;
+}
+
+.login_input a:visited{
+    
+}
+#fp{
+    float: right;
+}
+
+
+#cd{
+    text-align: center;
+}
+
+.animate {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media only screen and (max-width:890px)
+{
+    .login_input{
+        width: 90%;
+    }
+}

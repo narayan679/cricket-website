@@ -1,0 +1,171 @@
+body{
+    font-family: arial black;
+}
+#bg{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#header{
+    background-color: black; /* For browsers that do not support gradients */
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    background: linear-gradient(to right, black, #278A10);
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+#header #logo {
+    padding-left: 10px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+#header #loginlogo {
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+#header h1{
+    text-shadow: 5px 5px 2px black;
+    color: white;
+    font-size: 40px;
+    float: left;
+}
+
+#header::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+#header_option{
+    margin-top: 25px;
+}
+#header_option ul {
+    width: 100%;
+    border-radius: 8px;
+    list-style-type: none;
+    margin:0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+#header_option li 
+{
+    display: inline-block;
+    width: 19.5%;
+    margin: auto; 
+}
+
+li a, .dropbtn 
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn 
+{
+    background-color: #278A10;
+}
+
+li.dropdown 
+{
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a 
+{	
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover 
+{background-color: #278A10
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+
+
+hr{
+    border: none;
+    background-color: black;
+    height: 4px;
+}
+
+
+
+#footer_ footer{
+    border-radius: 8px;
+    box-shadow: 6px 6px 3px rgba(0,0,0,0.7);
+    color: white;
+    background-color: black;
+    padding: 3px;
+    padding-left: 5px;
+    font-family: arial;
+}
+
+@media only screen and (max-width:890px)
+{
+    #header_option li 
+    {
+        display:block;
+        width: 100%;
+        margin: auto; 
+    }
+    #header h1{
+        font-size: 25px;
+    }
+    #header #loginlogo{
+    position: absolute;
+    right: 15px;
+    top: 75px;
+    height: 25px;
+    width: 25px;
+    }
+    .login_input{
+        width: 90%;
+    }
+}
